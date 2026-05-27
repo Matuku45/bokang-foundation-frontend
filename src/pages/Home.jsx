@@ -8,26 +8,38 @@ const Home = () => {
 {/* HERO / CAROUSEL SECTION */}
 <section className="relative">
 
-  {/* Responsive Image Container */}
-  <div className="w-full h-[50vh] sm:h-[60vh] md:h-[80vh] relative">
+  {/* Responsive Container */}
+  <div className="w-full h-[45vh] sm:h-[55vh] md:h-[70vh] lg:h-[80vh] relative overflow-hidden">
 
     <img
       src={carouselImg}
       alt="Bokang Carousel"
-      className="w-full h-full object-cover object-center"
+      className="
+        w-full h-full
+        object-cover object-center
+        scale-110 sm:scale-105 md:scale-100
+        transition-transform duration-700
+      "
     />
 
-    {/* Overlay (lighter on mobile so image is visible) */}
-    <div className="absolute inset-0 bg-gradient-to-r from-pink-600/50 via-pink-400/30 to-pink-200/20"></div>
+    {/* Overlay (adaptive visibility for mobile) */}
+    <div className="absolute inset-0 bg-gradient-to-r from-pink-600/60 via-pink-400/40 to-pink-200/20"></div>
 
-    {/* Text */}
+    {/* Text Content */}
     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
 
-      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+      <h1 className="
+        text-xl sm:text-3xl md:text-5xl
+        font-bold mb-2 drop-shadow-lg
+      ">
         Bokang Foundation
       </h1>
 
-      <p className="text-sm sm:text-base md:text-lg max-w-xl">
+      <p className="
+        text-xs sm:text-sm md:text-lg
+        max-w-[90%] sm:max-w-xl
+        drop-shadow-md
+      ">
         Empowering communities through education, support, and opportunity
       </p>
 
