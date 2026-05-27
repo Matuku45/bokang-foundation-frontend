@@ -9,22 +9,27 @@ const Header = () => {
     <header className="bg-gradient-to-r from-pink-400 via-pink-300 to-pink-200 text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-3 md:p-4">
 
-        {/* Logo Section */}
-        <div className="flex items-center gap-3 md:gap-4">
-          
-          {/* Better visible logo container */}
-          <div className="bg-pink-600/30 p-2 rounded-full shadow-lg flex items-center justify-center">
-            <img
-              src={logo}
-              alt="Bokang Logo"
-              className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-full"
-            />
-          </div>
+     {/* Logo Section */}
+<div className="flex items-center gap-3 md:gap-4">
 
-          <span className="text-base md:text-xl font-bold tracking-wide text-white">
-            Bokang Foundation
-          </span>
-        </div>
+  {/* CLICKABLE LOGO */}
+  <Link to="/" className="flex items-center gap-3 md:gap-4">
+
+    <div className="bg-pink-600/30 p-2 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition">
+      <img
+        src={logo}
+        alt="Bokang Logo"
+        className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-full"
+      />
+    </div>
+
+    <span className="text-base md:text-xl font-bold tracking-wide text-white">
+      Bokang Foundation
+    </span>
+
+  </Link>
+
+</div>
 
         {/* Hamburger Icon */}
         <button

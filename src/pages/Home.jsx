@@ -5,30 +5,36 @@ import carouselImg from "../assets/couresel.png";
 const Home = () => {
   return (
     <div className="bg-pink-50 relative overflow-hidden">
+{/* HERO / CAROUSEL SECTION */}
+<section className="relative">
 
-      {/* HERO / CAROUSEL SECTION */}
-      <section className="relative">
+  {/* Responsive Image Container */}
+  <div className="w-full h-[50vh] sm:h-[60vh] md:h-[80vh] relative">
 
-        {/* Background Image Carousel */}
-        <div className="w-full h-[70vh] md:h-[80vh] relative">
-          <img
-            src={carouselImg}
-            alt="Bokang Carousel"
-            className="w-full h-full object-cover"
-          />
+    <img
+      src={carouselImg}
+      alt="Bokang Carousel"
+      className="w-full h-full object-cover object-center"
+    />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-600/70 via-pink-400/50 to-pink-200/40"></div>
+    {/* Overlay (lighter on mobile so image is visible) */}
+    <div className="absolute inset-0 bg-gradient-to-r from-pink-600/50 via-pink-400/30 to-pink-200/20"></div>
 
-          {/* Text */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">     
-            </h1>      
-            <div className="flex flex-col md:flex-row gap-4 mt-6">
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Text */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
+
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
+        Bokang Foundation
+      </h1>
+
+      <p className="text-sm sm:text-base md:text-lg max-w-xl">
+        Empowering communities through education, support, and opportunity
+      </p>
+
+    </div>
+
+  </div>
+</section>
 
       {/* MISSION SECTION */}
       <section className="py-16 max-w-7xl mx-auto px-6 text-center">
